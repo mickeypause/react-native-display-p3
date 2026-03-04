@@ -1,0 +1,9 @@
+{
+  "platforms": ["apple", "android", "web"],
+  "apple": {
+    "modules": ["P3Module"]
+  },
+  "android": {
+    "modules": ["expo.modules.p3.P3Module"]
+  }
+}
