@@ -13,28 +13,12 @@ public class P3Module: Module {
   public func definition() -> ModuleDefinition {
     Name("P3")
 
-    Constant("PI") {
-      Double.pi
-    }
-
     Constant("isWideGamutAvailable") {
       self.isWideGamutAvailable()
     }
 
     Constant("isWideGamutActive") {
       self.isWideGamutActive()
-    }
-
-    Events("onChange")
-
-    Function("hello") {
-      return "Hello world! 👋"
-    }
-
-    AsyncFunction("setValueAsync") { (value: String) in
-      self.sendEvent("onChange", [
-        "value": value
-      ])
     }
 
     View(P3View.self) {

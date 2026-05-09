@@ -1,37 +1,37 @@
-# react-native-p3
+# react-native-p3 (monorepo)
 
-Display-P3 color primitives for React Native
+This repository is a [Bun workspaces](https://bun.sh/docs/install/workspaces) monorepo:
 
-## Android Wide Gamut (Optional)
+| Path | Contents |
+|------|----------|
+| [`packages/react-native-p3`](./packages/react-native-p3) | Library published to npm as **`react-native-p3`** |
+| [`apps/example`](./apps/example) | Expo example app (private, not published) |
 
-`react-native-p3` is safe to use on Android, but true Display-P3 output is device-dependent.
+## Setup
 
-To enable wide-gamut rendering where supported, set `android:colorMode="wideColorGamut"` on your app activity.
+Install dependencies from the repository root (requires [Bun](https://bun.sh)):
 
-### Expo (managed / prebuild)
-
-After prebuild, update `android/app/src/main/AndroidManifest.xml`:
-
-```xml
-<activity
-  android:name=".MainActivity"
-  android:colorMode="wideColorGamut"
-  ... />
+```sh
+bun install
 ```
 
-### Bare React Native
+## Common tasks
 
-Set the same activity attribute in your app `AndroidManifest.xml`:
+From the root:
 
-```xml
-<activity
-  android:name=".MainActivity"
-  android:colorMode="wideColorGamut"
-  ... />
+- `bun run build` — compile the library (`packages/react-native-p3` → `build/`)
+- `bun run typecheck` — TypeScript check for the library
+- `bun run typecheck:example` — TypeScript check for the example app
+- `bun run lint` — oxlint across library source and example
+- `cd apps/example && bun run ios` — run the example on iOS
+
+## Publishing
+
+Publish only the package (from repo root):
+
+```sh
+cd packages/react-native-p3 && npm publish
+# or: bun publish
 ```
 
-### Fallback behavior
-
-- Devices that support wide gamut may render broader color output.
-- Devices that do not support it automatically fall back to standard rendering.
-- Keep Android wide-gamut as an enhancement and always design for acceptable sRGB fallback.
+The `"files"` field in `packages/react-native-p3/package.json` controls what goes into the tarball — the example app is not part of this package.

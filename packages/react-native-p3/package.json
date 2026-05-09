@@ -1,0 +1,53 @@
+{
+  "name": "react-native-p3",
+  "version": "0.1.0",
+  "description": "Display-P3 color primitives for React Native",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "files": [
+    "build",
+    "ios",
+    "src",
+    "expo-module.config.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "expo-module build",
+    "typecheck": "expo-module typecheck",
+    "clean": "expo-module clean",
+    "test": "expo-module test",
+    "prepare": "expo-module prepare",
+    "prepublishOnly": "expo-module prepublishOnly",
+    "expo-module": "expo-module"
+  },
+  "keywords": [
+    "react-native",
+    "expo",
+    "react-native-p3",
+    "P3"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mickeypause/react-native-p3.git",
+    "directory": "packages/react-native-p3"
+  },
+  "bugs": {
+    "url": "https://github.com/mickeypause/react-native-p3/issues"
+  },
+  "author": "mickeypause <serhii.pause@gmail.com> (https://github.com/mickeypause)",
+  "license": "MIT",
+  "homepage": "https://github.com/mickeypause/react-native-p3#readme",
+  "devDependencies": {
+    "@types/react": "~19.1.1",
+    "expo": "^55.0.3",
+    "expo-module-scripts": "^55.0.2",
+    "react-native": "0.82.1",
+    "typescript": "~5.9.2"
+  },
+  "peerDependencies": {
+    "expo": "*",
+    "react": "*",
+    "react-native": "*"
+  }
+}

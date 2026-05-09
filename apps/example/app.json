@@ -1,0 +1,22 @@
+{
+  "expo": {
+    "name": "react-native-p3",
+    "slug": "react-native-p3",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "expo.modules.reactnativep3.example",
+      "infoPlist": {
+        "CFBundleDisplayName": "react-native-p3"
+      }
+    }
+  }
+}
