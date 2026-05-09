@@ -1,0 +1,7 @@
+{
+  "name": "inline-color-picker",
+  "platforms": ["apple"],
+  "apple": {
+    "modules": ["InlineColorPickerModule"]
+  }
+}
