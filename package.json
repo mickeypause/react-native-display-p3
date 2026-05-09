@@ -8,7 +8,7 @@
     "typecheck": "bun run --filter react-native-p3 typecheck",
     "typecheck:example": "bun run --filter react-native-p3-example typecheck",
     "clean": "bun run --filter react-native-p3 clean",
-    "lint": "oxlint packages/react-native-p3/src apps/example --react-plugin",
+    "lint": "oxlint packages/react-native-p3/src apps/example apps/example/modules/cg-color-spaces/src --react-plugin",
     "test": "bun run --filter react-native-p3 test",
     "expo-module": "bun run --filter react-native-p3 expo-module"
   },

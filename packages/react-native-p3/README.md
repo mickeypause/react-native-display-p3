@@ -9,6 +9,6 @@ The native implementation targets **iOS** only in this release.
 ## API
 
 - **`P3View`** — native view with `p3BackgroundColor`, `p3BorderColor`, `p3ShadowColor` using **`UIColor(displayP3Red:...)`**.
-- **`P3Module`** — `isWideGamutAvailable` / `isWideGamutActive` (screen gamut info).
+- **`isWideGamutAvailable()`** / **`isWideGamutActive()`** — screen gamut helpers (read from the native `P3` module).
 
 Use React Native **`Text`** with normal `style.color` for labels; this package does not ship a text component.
